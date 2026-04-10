@@ -68,43 +68,46 @@ export default function App() {
       <section style={styles.sectionDark}>
         <h2>Certificeringen</h2>
 
-        <div style={styles.grid}>
-          <div style={styles.certCard}>
-            <h3>NEN 1010</h3>
-            <p>Veilige aanleg van elektrische installaties</p>
-          </div>
-
-          <div style={styles.certCard}>
-            <h3>NEN 3140</h3>
-            <p>Veilig werken aan elektrische installaties</p>
-          </div>
+        <div style={styles.certBox}>
+          <p>
+            Wij werken volgens de normen van <b>NEN 1010</b> en <b>NEN 3140</b>.
+          </p>
+          <p>
+            Dit staat garant voor veilige, betrouwbare en professionele elektrische installaties.
+          </p>
         </div>
       </section>
 
-      {/* PROJECTEN 📸 */}
+      {/* WONING & UTILITEIT (vervanging projecten) */}
       <section style={styles.section}>
-        <h2>Onze projecten</h2>
+        <h2>Woning & Utiliteit</h2>
 
         <div style={styles.grid}>
-          <div style={styles.photo}>Groepenkast vervangen</div>
-          <div style={styles.photo}>Nieuwe keuken installatie</div>
-          <div style={styles.photo}>Storing opgelost</div>
+          <div style={styles.card}>
+            🏠 Woningbouw<br />
+            Particuliere installaties en renovaties
+          </div>
+
+          <div style={styles.card}>
+            🏢 Utiliteit<br />
+            Bedrijven, winkels en zakelijke projecten
+          </div>
         </div>
       </section>
 
-      {/* REVIEWS ⭐ */}
+      {/* REVIEWS */}
       <section style={styles.sectionDark}>
         <h2>Klantenreviews</h2>
 
         <div style={styles.grid}>
           <div style={styles.review}>
-            ⭐⭐⭐⭐⭐
-            <p>“Snelle service en netjes gewerkt!”</p>
+            ⭐⭐⭐⭐⭐<br />
+            “Snelle service en netjes gewerkt!”
           </div>
 
           <div style={styles.review}>
-            ⭐⭐⭐⭐⭐
-            <p>“Betrouwbaar en goed bereikbaar.”</p>
+            ⭐⭐⭐⭐⭐<br />
+            “Betrouwbaar en goed bereikbaar.”
           </div>
         </div>
       </section>
@@ -210,18 +213,12 @@ const styles = {
     borderRadius: 12,
   },
 
-  certCard: {
+  certBox: {
     background: "#13264a",
     padding: 20,
     borderRadius: 12,
     border: "1px solid #1d4ed8",
-  },
-
-  photo: {
-    background: "#111c33",
-    padding: 30,
-    borderRadius: 12,
-    textAlign: "center",
+    marginTop: 20,
   },
 
   review: {
