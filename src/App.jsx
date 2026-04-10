@@ -26,16 +26,16 @@ export default function App() {
   return (
     <div style={styles.page}>
 
+      {/* SPOED BANNER ⚡ */}
+      <div style={styles.topBar}>
+        ⚡ 24/7 SPOEDSERVICE – DIRECT BESCHIKBAAR
+      </div>
+
       {/* HEADER */}
       <header style={styles.header}>
         <div style={styles.logo}>⚡ Elektrotechniek Khaleki</div>
 
-        <a
-          href={`https://wa.me/${whatsappNumber}`}
-          target="_blank"
-          rel="noreferrer"
-          style={styles.whatsappBtn}
-        >
+        <a href={`https://wa.me/${whatsappNumber}`} style={styles.whatsappBtn}>
           WhatsApp
         </a>
       </header>
@@ -64,25 +64,47 @@ export default function App() {
         </div>
       </section>
 
-      {/* CERTIFICERINGEN ⭐ NIEUW */}
+      {/* CERTIFICERINGEN */}
       <section style={styles.sectionDark}>
-        <h2>Certificeringen & veiligheid</h2>
+        <h2>Certificeringen</h2>
 
         <div style={styles.grid}>
           <div style={styles.certCard}>
-            <h3>🔵 NEN 1010</h3>
-            <p>
-              Installatienorm voor veilige aanleg van elektrische installaties.
-              Wij werken volgens de geldende veiligheidsnormen.
-            </p>
+            <h3>NEN 1010</h3>
+            <p>Veilige aanleg van elektrische installaties</p>
           </div>
 
           <div style={styles.certCard}>
-            <h3>🔵 NEN 3140</h3>
-            <p>
-              Veilig werken aan en met elektrische installaties.
-              Periodieke inspectie en veilig onderhoud gegarandeerd.
-            </p>
+            <h3>NEN 3140</h3>
+            <p>Veilig werken aan elektrische installaties</p>
+          </div>
+        </div>
+      </section>
+
+      {/* PROJECTEN 📸 */}
+      <section style={styles.section}>
+        <h2>Onze projecten</h2>
+
+        <div style={styles.grid}>
+          <div style={styles.photo}>Groepenkast vervangen</div>
+          <div style={styles.photo}>Nieuwe keuken installatie</div>
+          <div style={styles.photo}>Storing opgelost</div>
+        </div>
+      </section>
+
+      {/* REVIEWS ⭐ */}
+      <section style={styles.sectionDark}>
+        <h2>Klantenreviews</h2>
+
+        <div style={styles.grid}>
+          <div style={styles.review}>
+            ⭐⭐⭐⭐⭐
+            <p>“Snelle service en netjes gewerkt!”</p>
+          </div>
+
+          <div style={styles.review}>
+            ⭐⭐⭐⭐⭐
+            <p>“Betrouwbaar en goed bereikbaar.”</p>
           </div>
         </div>
       </section>
@@ -123,6 +145,13 @@ const styles = {
     color: "white",
   },
 
+  topBar: {
+    background: "#1d4ed8",
+    textAlign: "center",
+    padding: 8,
+    fontWeight: "bold",
+  },
+
   header: {
     display: "flex",
     justifyContent: "space-between",
@@ -148,7 +177,7 @@ const styles = {
 
   title: { fontSize: 40 },
 
-  subtitle: { opacity: 0.8, marginBottom: 20 },
+  subtitle: { opacity: 0.8 },
 
   heroBtn: {
     background: "#1d4ed8",
@@ -186,6 +215,19 @@ const styles = {
     padding: 20,
     borderRadius: 12,
     border: "1px solid #1d4ed8",
+  },
+
+  photo: {
+    background: "#111c33",
+    padding: 30,
+    borderRadius: 12,
+    textAlign: "center",
+  },
+
+  review: {
+    background: "#111c33",
+    padding: 20,
+    borderRadius: 12,
   },
 
   form: {
