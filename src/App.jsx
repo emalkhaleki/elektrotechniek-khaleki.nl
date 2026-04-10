@@ -28,9 +28,7 @@ export default function App() {
 
       {/* HEADER */}
       <header style={styles.header}>
-        <div style={styles.logo}>
-          ⚡ Elektrotechniek Khaleki
-        </div>
+        <div style={styles.logo}>⚡ Elektrotechniek Khaleki</div>
 
         <a
           href={`https://wa.me/${whatsappNumber}`}
@@ -44,21 +42,14 @@ export default function App() {
 
       {/* HERO */}
       <section style={styles.hero}>
-        <h1 style={styles.title}>
-          Elektrotechniek Khaleki
-        </h1>
+        <h1 style={styles.title}>Elektrotechniek Khaleki</h1>
         <p style={styles.subtitle}>
           Betrouwbare elektricien voor installaties, storingen en groepenkasten
         </p>
 
-        <div style={{ marginTop: 20 }}>
-          <a
-            href={`https://wa.me/${whatsappNumber}`}
-            style={styles.heroBtn}
-          >
-            Direct contact
-          </a>
-        </div>
+        <a href={`https://wa.me/${whatsappNumber}`} style={styles.heroBtn}>
+          Direct contact
+        </a>
       </section>
 
       {/* DIENSTEN */}
@@ -73,43 +64,44 @@ export default function App() {
         </div>
       </section>
 
-      {/* OFFERTES */}
+      {/* CERTIFICERINGEN ⭐ NIEUW */}
       <section style={styles.sectionDark}>
+        <h2>Certificeringen & veiligheid</h2>
+
+        <div style={styles.grid}>
+          <div style={styles.certCard}>
+            <h3>🔵 NEN 1010</h3>
+            <p>
+              Installatienorm voor veilige aanleg van elektrische installaties.
+              Wij werken volgens de geldende veiligheidsnormen.
+            </p>
+          </div>
+
+          <div style={styles.certCard}>
+            <h3>🔵 NEN 3140</h3>
+            <p>
+              Veilig werken aan en met elektrische installaties.
+              Periodieke inspectie en veilig onderhoud gegarandeerd.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* OFFERTES */}
+      <section style={styles.section}>
         <h2>Offerte aanvragen</h2>
 
         <form onSubmit={sendEmail} style={styles.form}>
-          <input
-            name="naam"
-            placeholder="Naam"
-            onChange={handleChange}
-            style={styles.input}
-            required
-          />
+          <input name="naam" placeholder="Naam" onChange={handleChange} style={styles.input} required />
+          <input name="telefoon" placeholder="Telefoonnummer" onChange={handleChange} style={styles.input} required />
+          <textarea name="bericht" placeholder="Beschrijf je klus..." onChange={handleChange} style={styles.textarea} required />
 
-          <input
-            name="telefoon"
-            placeholder="Telefoonnummer"
-            onChange={handleChange}
-            style={styles.input}
-            required
-          />
-
-          <textarea
-            name="bericht"
-            placeholder="Beschrijf je klus..."
-            onChange={handleChange}
-            style={styles.textarea}
-            required
-          />
-
-          <button style={styles.button}>
-            Verstuur offerte
-          </button>
+          <button style={styles.button}>Verstuur offerte</button>
         </form>
       </section>
 
       {/* CONTACT */}
-      <section style={styles.section}>
+      <section style={styles.sectionDark}>
         <h2>Contact</h2>
         <p>📞 0644878482</p>
         <p>✉️ emalkhaleki@hotmail.com</p>
@@ -136,13 +128,9 @@ const styles = {
     justifyContent: "space-between",
     padding: 20,
     background: "#0f1b33",
-    alignItems: "center",
   },
 
-  logo: {
-    fontSize: 18,
-    fontWeight: "bold",
-  },
+  logo: { fontSize: 18, fontWeight: "bold" },
 
   whatsappBtn: {
     background: "#25D366",
@@ -158,14 +146,9 @@ const styles = {
     background: "linear-gradient(135deg, #0f1b33, #1d4ed8)",
   },
 
-  title: {
-    fontSize: 40,
-    marginBottom: 10,
-  },
+  title: { fontSize: 40 },
 
-  subtitle: {
-    opacity: 0.8,
-  },
+  subtitle: { opacity: 0.8, marginBottom: 20 },
 
   heroBtn: {
     background: "#1d4ed8",
@@ -198,6 +181,13 @@ const styles = {
     borderRadius: 12,
   },
 
+  certCard: {
+    background: "#13264a",
+    padding: 20,
+    borderRadius: 12,
+    border: "1px solid #1d4ed8",
+  },
+
   form: {
     display: "flex",
     flexDirection: "column",
@@ -223,7 +213,6 @@ const styles = {
     padding: 12,
     border: "none",
     borderRadius: 8,
-    cursor: "pointer",
   },
 
   footer: {
