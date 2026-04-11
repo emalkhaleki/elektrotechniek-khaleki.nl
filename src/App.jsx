@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 
 export default function App() {
@@ -79,7 +78,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* WONING & UTILITEIT (vervanging projecten) */}
+      {/* WONING & UTILITEIT */}
       <section style={styles.section}>
         <h2>Woning & Utiliteit</h2>
 
@@ -94,6 +93,43 @@ export default function App() {
             Bedrijven, winkels en zakelijke projecten
           </div>
         </div>
+      </section>
+
+      {/* 🔥 SEO APPELDOORN SECTIE */}
+      <section style={styles.sectionSEO}>
+        <h2>Elektricien in Apeldoorn nodig?</h2>
+
+        <p>
+          Bent u op zoek naar een betrouwbare elektricien in Apeldoorn?
+          Elektrotechniek Khaleki helpt u snel bij storingen, groepenkasten
+          en complete installaties in woning en bedrijf.
+        </p>
+
+        <div style={{ margin: "20px 0" }}>
+          <a
+            href={`https://wa.me/${whatsappNumber}`}
+            style={styles.heroBtn}
+          >
+            💬 Direct WhatsApp contact
+          </a>
+        </div>
+
+        <h3>Diensten Apeldoorn</h3>
+        <ul>
+          <li>Groepenkast vervangen of uitbreiden</li>
+          <li>Storingen oplossen (spoed mogelijk)</li>
+          <li>Elektra aanleggen in woning of bedrijf</li>
+          <li>Renovatie en verbouwing</li>
+          <li>Verlichting en schakelaars installeren</li>
+        </ul>
+
+        <h3>Waarom kiezen voor ons?</h3>
+        <ul>
+          <li>✔ Snelle service in Apeldoorn en omgeving</li>
+          <li>✔ Ervaren en vakkundige elektricien</li>
+          <li>✔ Duidelijke en eerlijke prijzen</li>
+          <li>✔ Garantie op werkzaamheden</li>
+        </ul>
       </section>
 
       {/* REVIEWS */}
@@ -147,6 +183,8 @@ const styles = {
     fontFamily: "Arial",
     background: "#0b1220",
     color: "white",
+    maxWidth: "1100px",
+    margin: "0 auto"
   },
 
   topBar: {
@@ -199,6 +237,13 @@ const styles = {
   sectionDark: {
     padding: 50,
     background: "#0f1b33",
+  },
+
+  sectionSEO: {
+    padding: 50,
+    background: "#111c33",
+    borderTop: "2px solid #1d4ed8",
+    borderBottom: "2px solid #1d4ed8"
   },
 
   grid: {
