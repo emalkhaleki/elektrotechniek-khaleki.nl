@@ -182,9 +182,7 @@ const styles = {
   page: {
     fontFamily: "Arial",
     background: "#0b1220",
-    color: "white",
-    maxWidth: "1100px",
-    margin: "0 auto"
+    color: "white"
   },
 
   topBar: {
