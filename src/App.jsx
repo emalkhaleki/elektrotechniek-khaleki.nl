@@ -1,15 +1,15 @@
-import React, { useState } from "react";<h1>Elektricien in [apeldoorn]</h1>
+import React, { useState } from "react";
 
 export default function App() {
-  const [form, setForm] = useState({
+  
     naam: "",
     telefoon: "",
     bericht: "",
   });
-<p>
+
 Ik ben een ervaren elektricien in [apeldoorn] en omgeving. 
 Voor storingen, groepenkasten en complete installaties kunt u bij mij terecht.
-</p>
+
   const whatsappNumber = "31644878482";
 
   const handleChange = (e) => {
