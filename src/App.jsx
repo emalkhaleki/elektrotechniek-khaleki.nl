@@ -1,5 +1,5 @@
 import React, { useState } from "react";<h1>Elektricien in [apeldoorn]</h1>
-
+import ElektricienApeldoorn from "./pages/ElektricienApeldoorn";
 export default function App() {
   const [form, setForm] = useState({
     naam: "",
