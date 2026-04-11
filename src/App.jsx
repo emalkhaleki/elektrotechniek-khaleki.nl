@@ -7,7 +7,7 @@ export default function App() {
     bericht: "",
   });
 <p>
-Ik ben een ervaren elektricien in [JOUW STAD] en omgeving. 
+Ik ben een ervaren elektricien in [apeldoorn] en omgeving. 
 Voor storingen, groepenkasten en complete installaties kunt u bij mij terecht.
 </p>
   const whatsappNumber = "31644878482";
