@@ -26,7 +26,15 @@ export default function App() {
   return (
     <div style={styles.page}>
 
-      {/* SPOED BANNER ⚡ */}
+      {/* STICKY WHATSAPP BUTTON */}
+      <a
+        href={`https://wa.me/${whatsappNumber}`}
+        style={styles.stickyWhatsApp}
+      >
+        💬 WhatsApp
+      </a>
+
+      {/* SPOED BANNER */}
       <div style={styles.topBar}>
         ⚡ 24/7 SPOEDSERVICE – DIRECT BESCHIKBAAR
       </div>
@@ -44,11 +52,11 @@ export default function App() {
       <section style={styles.hero}>
         <h1 style={styles.title}>Elektrotechniek Khaleki</h1>
         <p style={styles.subtitle}>
-          Betrouwbare elektricien voor installaties, storingen en groepenkasten
+          Spoed elektricien in Apeldoorn – snel, betrouwbaar en 24/7 bereikbaar
         </p>
 
         <a href={`https://wa.me/${whatsappNumber}`} style={styles.heroBtn}>
-          Direct contact
+          🔥 Direct hulp nodig
         </a>
       </section>
 
@@ -95,14 +103,13 @@ export default function App() {
         </div>
       </section>
 
-      {/* 🔥 SEO APPELDOORN SECTIE */}
+      {/* SEO APPELDOORN */}
       <section style={styles.sectionSEO}>
         <h2>Elektricien in Apeldoorn nodig?</h2>
 
         <p>
-          Bent u op zoek naar een betrouwbare elektricien in Apeldoorn?
-          Elektrotechniek Khaleki helpt u snel bij storingen, groepenkasten
-          en complete installaties in woning en bedrijf.
+          Spoed of planning nodig? Wij helpen direct bij storingen,
+          groepenkasten en elektra problemen in Apeldoorn en omgeving.
         </p>
 
         <div style={{ margin: "20px 0" }}>
@@ -110,25 +117,24 @@ export default function App() {
             href={`https://wa.me/${whatsappNumber}`}
             style={styles.heroBtn}
           >
-            💬 Direct WhatsApp contact
+            💬 Direct contact
           </a>
         </div>
 
-        <h3>Diensten Apeldoorn</h3>
+        <h3>Diensten</h3>
         <ul>
-          <li>Groepenkast vervangen of uitbreiden</li>
-          <li>Storingen oplossen (spoed mogelijk)</li>
-          <li>Elektra aanleggen in woning of bedrijf</li>
-          <li>Renovatie en verbouwing</li>
-          <li>Verlichting en schakelaars installeren</li>
+          <li>Groepenkast vervangen</li>
+          <li>Storingen oplossen (spoed)</li>
+          <li>Elektra renovatie</li>
+          <li>Installaties woning & bedrijf</li>
         </ul>
 
-        <h3>Waarom kiezen voor ons?</h3>
+        <h3>Waarom wij?</h3>
         <ul>
-          <li>✔ Snelle service in Apeldoorn en omgeving</li>
-          <li>✔ Ervaren en vakkundige elektricien</li>
-          <li>✔ Duidelijke en eerlijke prijzen</li>
-          <li>✔ Garantie op werkzaamheden</li>
+          <li>✔ 24/7 bereikbaar</li>
+          <li>✔ Snelle service in Apeldoorn</li>
+          <li>✔ Eerlijke prijzen</li>
+          <li>✔ Ervaren elektricien</li>
         </ul>
       </section>
 
@@ -137,15 +143,8 @@ export default function App() {
         <h2>Klantenreviews</h2>
 
         <div style={styles.grid}>
-          <div style={styles.review}>
-            ⭐⭐⭐⭐⭐<br />
-            “Snelle service en netjes gewerkt!”
-          </div>
-
-          <div style={styles.review}>
-            ⭐⭐⭐⭐⭐<br />
-            “Betrouwbaar en goed bereikbaar.”
-          </div>
+          <div style={styles.review}>⭐⭐⭐⭐⭐<br />“Snelle service en netjes gewerkt!”</div>
+          <div style={styles.review}>⭐⭐⭐⭐⭐<br />“Altijd bereikbaar en betrouwbaar.”</div>
         </div>
       </section>
 
@@ -173,11 +172,16 @@ export default function App() {
       <footer style={styles.footer}>
         © 2026 Elektrotechniek Khaleki
       </footer>
+
+      {/* BOTTOM SPOED BAR */}
+      <div style={styles.bottomBar}>
+        ⚡ Spoed nodig? Bel of WhatsApp direct voor hulp
+      </div>
+
     </div>
   );
 }
 
-/* STYLES */
 const styles = {
   page: {
     fontFamily: "Arial",
@@ -189,14 +193,14 @@ const styles = {
     background: "#1d4ed8",
     textAlign: "center",
     padding: 8,
-    fontWeight: "bold",
+    fontWeight: "bold"
   },
 
   header: {
     display: "flex",
     justifyContent: "space-between",
     padding: 20,
-    background: "#0f1b33",
+    background: "#0f1b33"
   },
 
   logo: { fontSize: 18, fontWeight: "bold" },
@@ -206,35 +210,35 @@ const styles = {
     padding: "10px 15px",
     borderRadius: 8,
     color: "white",
-    textDecoration: "none",
+    textDecoration: "none"
   },
 
   hero: {
     textAlign: "center",
     padding: "80px 20px",
-    background: "linear-gradient(135deg, #0f1b33, #1d4ed8)",
+    background: "linear-gradient(135deg, #0f1b33, #1d4ed8)"
   },
 
   title: { fontSize: 40 },
 
-  subtitle: { opacity: 0.8 },
+  subtitle: { opacity: 0.85 },
 
   heroBtn: {
     background: "#1d4ed8",
     padding: "12px 20px",
     borderRadius: 10,
     color: "white",
-    textDecoration: "none",
+    textDecoration: "none"
   },
 
   section: {
     padding: 50,
-    background: "#0b1220",
+    background: "#0b1220"
   },
 
   sectionDark: {
     padding: 50,
-    background: "#0f1b33",
+    background: "#0f1b33"
   },
 
   sectionSEO: {
@@ -248,13 +252,13 @@ const styles = {
     display: "grid",
     gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
     gap: 15,
-    marginTop: 20,
+    marginTop: 20
   },
 
   card: {
     background: "#111c33",
     padding: 20,
-    borderRadius: 12,
+    borderRadius: 12
   },
 
   certBox: {
@@ -262,32 +266,32 @@ const styles = {
     padding: 20,
     borderRadius: 12,
     border: "1px solid #1d4ed8",
-    marginTop: 20,
+    marginTop: 20
   },
 
   review: {
     background: "#111c33",
     padding: 20,
-    borderRadius: 12,
+    borderRadius: 12
   },
 
   form: {
     display: "flex",
     flexDirection: "column",
     gap: 10,
-    maxWidth: 400,
+    maxWidth: 400
   },
 
   input: {
     padding: 10,
     borderRadius: 8,
-    border: "none",
+    border: "none"
   },
 
   textarea: {
     padding: 10,
     borderRadius: 8,
-    height: 100,
+    height: 100
   },
 
   button: {
@@ -295,13 +299,36 @@ const styles = {
     color: "white",
     padding: 12,
     border: "none",
-    borderRadius: 8,
+    borderRadius: 8
   },
 
   footer: {
     textAlign: "center",
     padding: 20,
     background: "#0f1b33",
-    fontSize: 12,
+    fontSize: 12
   },
+
+  stickyWhatsApp: {
+    position: "fixed",
+    right: 20,
+    bottom: 80,
+    background: "#25D366",
+    padding: "12px 14px",
+    borderRadius: "50px",
+    color: "white",
+    fontWeight: "bold",
+    zIndex: 9999
+  },
+
+  bottomBar: {
+    position: "fixed",
+    left: 0,
+    bottom: 0,
+    width: "100%",
+    background: "#1d4ed8",
+    textAlign: "center",
+    padding: 12,
+    fontWeight: "bold"
+  }
 };
