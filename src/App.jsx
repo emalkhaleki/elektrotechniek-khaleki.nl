@@ -135,7 +135,49 @@ Voor storingen, groepenkasten en complete installaties kunt u bij mij terecht.
         <p>✉️ emalkhaleki@hotmail.com</p>
       </section>
 
-      {/* FOOTER */}
+  <section style={styles.section}>
+  <h2>Elektricien in Apeldoorn nodig? Snel en vakkundig geholpen</h2>
+
+  <p>
+    Bent u op zoek naar een betrouwbare elektricien in Apeldoorn?
+    Elektrotechniek Khaleki helpt u snel en professioneel bij storingen,
+    groepenkasten en complete installaties.
+  </p>
+
+  <div style={{ margin: "20px 0" }}>
+    <a
+      href="https://wa.me/31644878482"
+      target="_blank"
+      rel="noopener noreferrer"
+      style={styles.heroBtn}
+    >
+      💬 Direct WhatsApp contact
+    </a>
+  </div>
+
+  <h3>Diensten elektricien Apeldoorn</h3>
+  <ul>
+    <li>Groepenkast vervangen of uitbreiden</li>
+    <li>Storingen oplossen (spoed mogelijk)</li>
+    <li>Elektra aanleggen in woning of bedrijf</li>
+    <li>Renovatie en verbouwing</li>
+    <li>Verlichting installeren</li>
+    <li>Stopcontacten en schakelaars plaatsen</li>
+  </ul>
+
+  <h3>Waarom kiezen voor ons?</h3>
+  <ul>
+    <li>✔ Snelle service in Apeldoorn en omgeving</li>
+    <li>✔ Ervaren en vakkundige elektricien</li>
+    <li>✔ Duidelijke en eerlijke prijzen</li>
+    <li>✔ Garantie op uitgevoerde werkzaamheden</li>
+  </ul>
+
+  <p>
+    Werkzaam in Apeldoorn en omliggende plaatsen zoals Deventer,
+    Zutphen en Arnhem.
+  </p>
+</section>    {/* FOOTER */}
       <footer style={styles.footer}>
         © 2026 Elektrotechniek Khaleki
       </footer>
