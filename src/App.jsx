@@ -6,7 +6,10 @@ export default function App() {
     telefoon: "",
     bericht: "",
   });
-
+<p>
+Ik ben een ervaren elektricien in [JOUW STAD] en omgeving. 
+Voor storingen, groepenkasten en complete installaties kunt u bij mij terecht.
+</p>
   const whatsappNumber = "31644878482";
 
   const handleChange = (e) => {
