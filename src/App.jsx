@@ -72,15 +72,45 @@ export default function App() {
         </a>
       </section>
 
-   {/* DIENSTEN */}
+{/* DIENSTEN */}
 <section style={styles.section}>
   <h2>Onze diensten</h2>
 
+  <p style={{ opacity: 0.85, marginTop: 10 }}>
+    Gespecialiseerd in complete elektrotechnische installaties voor
+    woningbouw en utiliteit, van aanleg tot oplevering.
+  </p>
+
   <div style={styles.grid}>
-    <div style={styles.card}>⚡ Installaties</div>
-    <div style={styles.card}>🔧 Storingen</div>
-    <div style={styles.card}>🛡️ Groepenkasten</div>
-    <div style={styles.card}>🏠 Renovatie elektra</div>
+    <div style={styles.card}>
+      ⚡ Complete installaties<br />
+      Van A tot Z voor woningen en bedrijfspanden
+    </div>
+
+    <div style={styles.card}>
+      🏠 Nieuwbouw & renovatie<br />
+      Volledige elektra bij verbouwingen en nieuwbouw
+    </div>
+
+    <div style={styles.card}>
+      🏢 Utiliteit & zakelijke projecten<br />
+      Kantoren, winkels en bedrijfspanden
+    </div>
+
+    <div style={styles.card}>
+      🔌 Groepenkasten & krachtstroom<br />
+      Uitbreiden, vervangen en aansluiten
+    </div>
+
+    <div style={styles.card}>
+      💡 Verlichting & lichtplannen<br />
+      Binnen, buiten en LED-oplossingen
+    </div>
+
+    <div style={styles.card}>
+      🚗 Laadpalen<br />
+      Installatie voor thuis en zakelijk gebruik
+    </div>
   </div>
 </section>
       {/* CERTIFICERINGEN */}
