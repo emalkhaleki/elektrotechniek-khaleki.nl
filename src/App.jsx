@@ -241,3 +241,6 @@ const styles = {
     textDecoration: "none",
   },
 };
+git add .
+git commit -m "Logo achtergrond toegevoegd"
+git push
