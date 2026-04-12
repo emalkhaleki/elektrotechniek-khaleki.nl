@@ -72,18 +72,17 @@ export default function App() {
         </a>
       </section>
 
-      {/* DIENSTEN */}
-      <section style={styles.section}>
-        <h2>Onze diensten</h2>
+   {/* DIENSTEN */}
+<section style={styles.section}>
+  <h2>Onze diensten</h2>
 
-        <div style={styles.grid}>
-          <div style={styles.card}>⚡ Installaties</div>
-          <div style={styles.card}>🔧 Storingen</div>
-          <div style={styles.card}>🛡️ Groepenkasten</div>
-          <div style={styles.card}>🏠 Renovatie elektra</div>
-        </div>
-      </section>
-
+  <div style={styles.grid}>
+    <div style={styles.card}>⚡ Installaties</div>
+    <div style={styles.card}>🔧 Storingen</div>
+    <div style={styles.card}>🛡️ Groepenkasten</div>
+    <div style={styles.card}>🏠 Renovatie elektra</div>
+  </div>
+</section>
       {/* CERTIFICERINGEN */}
       <section style={styles.sectionDark}>
         <h2>Certificeringen</h2>
