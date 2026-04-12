@@ -10,7 +10,8 @@ export default function App() {
   const whatsappNumber = "31644878482";
 
   useEffect(() => {
-    document.title = "Elektricien Apeldoorn | Elektrotechniek Khaleki - Spoed & Installaties";
+    document.title =
+      "Elektricien Apeldoorn | Elektrotechniek Khaleki - Spoed & Installaties";
 
     const meta = document.querySelector("meta[name='description']");
     if (meta) {
@@ -37,8 +38,7 @@ export default function App() {
 
   return (
     <div style={styles.page}>
-
-      {/* STICKY WHATSAPP BUTTON */}
+      {/* WHATSAPP FLOAT BUTTON */}
       <a
         href={`https://wa.me/${whatsappNumber}`}
         style={styles.stickyWhatsApp}
@@ -46,7 +46,7 @@ export default function App() {
         💬 WhatsApp
       </a>
 
-      {/* SPOED BANNER */}
+      {/* TOP BAR */}
       <div style={styles.topBar}>
         ⚡ 24/7 SPOEDSERVICE – DIRECT BESCHIKBAAR
       </div>
@@ -60,9 +60,12 @@ export default function App() {
         </a>
       </header>
 
-      {/* HERO */}
+      {/* HERO WITH WATERMARK */}
       <section style={styles.hero}>
+        <div style={styles.heroWatermark}>⚡ 🔌</div>
+
         <h1 style={styles.title}>Elektrotechniek Khaleki</h1>
+
         <p style={styles.subtitle}>
           Spoed elektricien in Apeldoorn – snel, betrouwbaar en 24/7 bereikbaar
         </p>
@@ -72,47 +75,48 @@ export default function App() {
         </a>
       </section>
 
-{/* DIENSTEN */}
-<section style={styles.section}>
-  <h2>Onze diensten</h2>
+      {/* DIENSTEN */}
+      <section style={styles.section}>
+        <h2>Onze diensten</h2>
 
-  <p style={{ opacity: 0.85, marginTop: 10 }}>
-    Gespecialiseerd in complete elektrotechnische installaties voor
-    woningbouw en utiliteit, van aanleg tot oplevering.
-  </p>
+        <p style={{ opacity: 0.85, marginTop: 10 }}>
+          Gespecialiseerd in complete elektrotechnische installaties voor
+          woningbouw en utiliteit, van aanleg tot oplevering.
+        </p>
 
-  <div style={styles.grid}>
-    <div style={styles.card}>
-      ⚡ Complete installaties<br />
-      Van A tot Z voor woningen en bedrijfspanden
-    </div>
+        <div style={styles.grid}>
+          <div style={styles.card}>
+            ⚡ Complete installaties<br />
+            Van A tot Z voor woningen en bedrijfspanden
+          </div>
 
-    <div style={styles.card}>
-      🏠 Nieuwbouw & renovatie<br />
-      Volledige elektra bij verbouwingen en nieuwbouw
-    </div>
+          <div style={styles.card}>
+            🏠 Nieuwbouw & renovatie<br />
+            Volledige elektra bij verbouwingen en nieuwbouw
+          </div>
 
-    <div style={styles.card}>
-      🏢 Utiliteit & zakelijke projecten<br />
-      Kantoren, winkels en bedrijfspanden
-    </div>
+          <div style={styles.card}>
+            🏢 Utiliteit & zakelijke projecten<br />
+            Kantoren, winkels en bedrijfspanden
+          </div>
 
-    <div style={styles.card}>
-      🔌 Groepenkasten & krachtstroom<br />
-      Uitbreiden, vervangen en aansluiten
-    </div>
+          <div style={styles.card}>
+            🔌 Groepenkasten & krachtstroom<br />
+            Uitbreiden, vervangen en aansluiten
+          </div>
 
-    <div style={styles.card}>
-      💡 Verlichting & lichtplannen<br />
-      Binnen, buiten en LED-oplossingen
-    </div>
+          <div style={styles.card}>
+            💡 Verlichting & lichtplannen<br />
+            Binnen, buiten en LED-oplossingen
+          </div>
 
-    <div style={styles.card}>
-      🚗 Laadpalen<br />
-      Installatie voor thuis en zakelijk gebruik
-    </div>
-  </div>
-</section>
+          <div style={styles.card}>
+            🚗 Laadpalen<br />
+            Installatie voor thuis en zakelijk gebruik
+          </div>
+        </div>
+      </section>
+
       {/* CERTIFICERINGEN */}
       <section style={styles.sectionDark}>
         <h2>Certificeringen</h2>
@@ -122,7 +126,8 @@ export default function App() {
             Wij werken volgens de normen van <b>NEN 1010</b> en <b>NEN 3140</b>.
           </p>
           <p>
-            Dit staat garant voor veilige, betrouwbare en professionele elektrische installaties.
+            Dit staat garant voor veilige, betrouwbare en professionele
+            elektrische installaties.
           </p>
         </div>
       </section>
@@ -144,7 +149,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* SEO APPELDOORN */}
+      {/* SEO */}
       <section style={styles.sectionSEO}>
         <h2>Elektricien in Apeldoorn nodig?</h2>
 
@@ -154,10 +159,7 @@ export default function App() {
         </p>
 
         <div style={{ margin: "20px 0" }}>
-          <a
-            href={`https://wa.me/${whatsappNumber}`}
-            style={styles.heroBtn}
-          >
+          <a href={`https://wa.me/${whatsappNumber}`} style={styles.heroBtn}>
             💬 Direct contact
           </a>
         </div>
@@ -184,9 +186,27 @@ export default function App() {
         <h2>Offerte aanvragen</h2>
 
         <form onSubmit={sendEmail} style={styles.form}>
-          <input name="naam" placeholder="Naam" onChange={handleChange} style={styles.input} required />
-          <input name="telefoon" placeholder="Telefoonnummer" onChange={handleChange} style={styles.input} required />
-          <textarea name="bericht" placeholder="Beschrijf je klus..." onChange={handleChange} style={styles.textarea} required />
+          <input
+            name="naam"
+            placeholder="Naam"
+            onChange={handleChange}
+            style={styles.input}
+            required
+          />
+          <input
+            name="telefoon"
+            placeholder="Telefoonnummer"
+            onChange={handleChange}
+            style={styles.input}
+            required
+          />
+          <textarea
+            name="bericht"
+            placeholder="Beschrijf je klus..."
+            onChange={handleChange}
+            style={styles.textarea}
+            required
+          />
 
           <button style={styles.button}>Verstuur offerte</button>
         </form>
@@ -211,21 +231,21 @@ const styles = {
   page: {
     fontFamily: "Arial",
     background: "#0b1220",
-    color: "white"
+    color: "white",
   },
 
   topBar: {
     background: "#1d4ed8",
     textAlign: "center",
     padding: 8,
-    fontWeight: "bold"
+    fontWeight: "bold",
   },
 
   header: {
     display: "flex",
     justifyContent: "space-between",
     padding: 20,
-    background: "#0f1b33"
+    background: "#0f1b33",
   },
 
   logo: { fontSize: 18, fontWeight: "bold" },
@@ -235,13 +255,25 @@ const styles = {
     padding: "10px 15px",
     borderRadius: 8,
     color: "white",
-    textDecoration: "none"
+    textDecoration: "none",
   },
 
   hero: {
     textAlign: "center",
-    padding: "80px 20px",
-    background: "linear-gradient(135deg, #0f1b33, #1d4ed8)"
+    padding: "90px 20px",
+    background: "linear-gradient(135deg, #0f1b33, #1d4ed8)",
+    position: "relative",
+    overflow: "hidden",
+  },
+
+  heroWatermark: {
+    position: "absolute",
+    fontSize: 140,
+    opacity: 0.08,
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    pointerEvents: "none",
   },
 
   title: { fontSize: 40 },
@@ -253,37 +285,39 @@ const styles = {
     padding: "12px 20px",
     borderRadius: 10,
     color: "white",
-    textDecoration: "none"
+    textDecoration: "none",
+    display: "inline-block",
+    marginTop: 15,
   },
 
   section: {
     padding: 50,
-    background: "#0b1220"
+    background: "#0b1220",
   },
 
   sectionDark: {
     padding: 50,
-    background: "#0f1b33"
+    background: "#0f1b33",
   },
 
   sectionSEO: {
     padding: 50,
     background: "#111c33",
     borderTop: "2px solid #1d4ed8",
-    borderBottom: "2px solid #1d4ed8"
+    borderBottom: "2px solid #1d4ed8",
   },
 
   grid: {
     display: "grid",
     gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
     gap: 15,
-    marginTop: 20
+    marginTop: 20,
   },
 
   card: {
     background: "#111c33",
     padding: 20,
-    borderRadius: 12
+    borderRadius: 12,
   },
 
   certBox: {
@@ -291,26 +325,26 @@ const styles = {
     padding: 20,
     borderRadius: 12,
     border: "1px solid #1d4ed8",
-    marginTop: 20
+    marginTop: 20,
   },
 
   form: {
     display: "flex",
     flexDirection: "column",
     gap: 10,
-    maxWidth: 400
+    maxWidth: 400,
   },
 
   input: {
     padding: 10,
     borderRadius: 8,
-    border: "none"
+    border: "none",
   },
 
   textarea: {
     padding: 10,
     borderRadius: 8,
-    height: 100
+    height: 100,
   },
 
   button: {
@@ -318,14 +352,14 @@ const styles = {
     color: "white",
     padding: 12,
     border: "none",
-    borderRadius: 8
+    borderRadius: 8,
   },
 
   footer: {
     textAlign: "center",
     padding: 20,
     background: "#0f1b33",
-    fontSize: 12
+    fontSize: 12,
   },
 
   stickyWhatsApp: {
@@ -337,6 +371,6 @@ const styles = {
     borderRadius: "50px",
     color: "white",
     fontWeight: "bold",
-    zIndex: 9999
-  }
+    zIndex: 9999,
+  },
 };
