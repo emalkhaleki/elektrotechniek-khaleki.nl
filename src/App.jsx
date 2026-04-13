@@ -37,10 +37,21 @@ export default function App() {
   };
 
   return (
-    <div style={styles.page}>
-      <a href={`https://wa.me/${whatsappNumber}`} style={styles.stickyWhatsApp}>
-        💬 WhatsApp
-      </a>
+ return (
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={
+        <div style={styles.page}>
+          {/* HIER JE HUIDIGE HOMEPAGE CODE LATEN STAAN */}
+        </div>
+      } />
+      <Route
+        path="/groepenkast-vervangen"
+        element={<GroepenkastPagina />}
+      />
+    </Routes>
+  </BrowserRouter>
+);
 
       <div style={styles.topBar}>
         ⚡ 24/7 SPOEDSERVICE – DIRECT BESCHIKBAAR
