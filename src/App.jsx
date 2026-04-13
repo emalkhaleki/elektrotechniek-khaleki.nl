@@ -76,7 +76,9 @@ export default function App() {
 
       <section style={styles.section}>
         <h2>Onze diensten</h2>
-        <p style={{ opacity: 0.85, marginTop: 10 }}>
+  <Link to="/groepenkast-vervangen" style={styles.heroBtn}>
+  Meer over groepenkasten
+</Link>      <p style={{ opacity: 0.85, marginTop: 10 }}>
           Gespecialiseerd in complete elektrotechnische installaties voor
           woningbouw en utiliteit, van aanleg tot oplevering.
         </p>
