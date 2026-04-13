@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 export default function App() {
   const [form, setForm] = useState({
     naam: "",
@@ -37,21 +36,10 @@ export default function App() {
   };
 
   return (
- return (
-  <BrowserRouter>
-    <Routes>
-      <Route path="/" element={
-        <div style={styles.page}>
-          {/* HIER JE HUIDIGE HOMEPAGE CODE LATEN STAAN */}
-        </div>
-      } />
-      <Route
-        path="/groepenkast-vervangen"
-        element={<GroepenkastPagina />}
-      />
-    </Routes>
-  </BrowserRouter>
-);
+    <div style={styles.page}>
+      <a href={`https://wa.me/${whatsappNumber}`} style={styles.stickyWhatsApp}>
+        💬 WhatsApp
+      </a>
 
       <div style={styles.topBar}>
         ⚡ 24/7 SPOEDSERVICE – DIRECT BESCHIKBAAR
@@ -76,9 +64,7 @@ export default function App() {
 
       <section style={styles.section}>
         <h2>Onze diensten</h2>
-  <Link to="/groepenkast-vervangen" style={styles.heroBtn}>
-  Meer over groepenkasten
-</Link>      <p style={{ opacity: 0.85, marginTop: 10 }}>
+        <p style={{ opacity: 0.85, marginTop: 10 }}>
           Gespecialiseerd in complete elektrotechnische installaties voor
           woningbouw en utiliteit, van aanleg tot oplevering.
         </p>
@@ -141,54 +127,7 @@ export default function App() {
     </div>
   );
 }
-function GroepenkastPagina() {
-  useEffect(() => {
-    document.title =
-      "Groepenkast vervangen Apeldoorn | Elektrotechniek Khaleki";
 
-    const meta = document.querySelector("meta[name='description']");
-    if (meta) {
-      meta.setAttribute(
-        "content",
-        "Groepenkast laten vervangen in Apeldoorn? Elektrotechniek Khaleki verzorgt veilige en professionele vervanging en uitbreiding van groepenkasten."
-      );
-    }
-  }, []);
-
-  return (
-    <div style={styles.page}>
-      <header style={styles.header}>
-        <div style={styles.logo}>⚡ Elektrotechniek Khaleki</div>
-        <Link to="/" style={styles.whatsappBtn}>
-          Terug naar home
-        </Link>
-      </header>
-
-      <section style={styles.hero}>
-        <h1 style={styles.title}>Groepenkast vervangen in Apeldoorn</h1>
-        <p style={styles.subtitle}>
-          Veilig, professioneel en volgens NEN 1010 normen
-        </p>
-      </section>
-
-      <section style={styles.section}>
-        <h2>Professionele vervanging & uitbreiding</h2>
-        <p>
-          Is je groepenkast verouderd of heb je extra groepen nodig voor
-          bijvoorbeeld een inductiekookplaat, zonnepanelen of laadpaal?
-          Elektrotechniek Khaleki helpt snel en vakkundig in Apeldoorn en omgeving.
-        </p>
-
-        <div style={styles.grid}>
-          <div style={styles.card}>⚡ Nieuwe groepenkast plaatsen</div>
-          <div style={styles.card}>🔌 Extra groepen aanleggen</div>
-          <div style={styles.card}>🏠 Krachtstroom & 3-fase</div>
-          <div style={styles.card}>🚗 Voorbereiding laadpaal</div>
-        </div>
-      </section>
-    </div>
-  );
-}
 const styles = {
   page: {
     fontFamily: "Arial",
