@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import heroImage from "./assets/hero-installatie.jpg"; // plaats jouw foto hier
+import heroImage from "./assets/hero-installatie.jpg"; //
 
 export default function App() {
   const [form, setForm] = useState({
