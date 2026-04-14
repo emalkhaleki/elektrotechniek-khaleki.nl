@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import heroImage from "./assets/hero-installatie.jpg"; //
 
 export default function App() {
   const [form, setForm] = useState({
@@ -29,6 +28,7 @@ export default function App() {
 
   const sendEmail = (e) => {
     e.preventDefault();
+
     window.location.href =
       `mailto:emalkhaleki@hotmail.com?subject=Offerte aanvraag van ${form.naam}&body=` +
       `Naam: ${form.naam}%0D%0A` +
@@ -53,15 +53,10 @@ export default function App() {
         </a>
       </header>
 
-      <section
-        style={{
-          ...styles.hero,
-          backgroundImage: `linear-gradient(rgba(15,27,51,0.75), rgba(29,78,216,0.75)), url(${heroImage})`,
-        }}
-      >
+      <section style={styles.hero}>
         <h1 style={styles.title}>Elektrotechniek Khaleki</h1>
         <p style={styles.subtitle}>
-          Specialist in complete elektrotechnische installaties, utiliteit en woningbouw
+          Spoed elektricien in Apeldoorn – snel, betrouwbaar en 24/7 bereikbaar
         </p>
         <a href={`https://wa.me/${whatsappNumber}`} style={styles.heroBtn}>
           🔥 Direct hulp nodig
@@ -71,11 +66,12 @@ export default function App() {
       <section style={styles.trustSection}>
         <div style={styles.trustOverlay}>
           <h2 style={{ fontSize: 32, marginBottom: 20 }}>
-            Professionele installaties voor woning en utiliteit
+            Professionele elektrotechnische installaties voor woning en utiliteit
           </h2>
           <p style={{ maxWidth: 700, lineHeight: 1.7, opacity: 0.95 }}>
-            Specialist in groepenkasten, kabelgoten, krachtstroom, nieuwbouw,
-            renovatie en zakelijke projecten volgens NEN 1010 en NEN 3140.
+            Specialist in groepenkasten, complete installaties, renovatie,
+            nieuwbouw en zakelijke projecten. Veilig uitgevoerd volgens
+            NEN 1010 en NEN 3140.
           </p>
           <div style={styles.grid}>
             <div style={styles.card}>✅ 24/7 spoedservice</div>
@@ -88,17 +84,52 @@ export default function App() {
 
       <section style={styles.section}>
         <h2>Onze diensten</h2>
+        <p style={{ opacity: 0.85, marginTop: 10 }}>
+          Gespecialiseerd in complete elektrotechnische installaties voor
+          woningbouw en utiliteit, van aanleg tot oplevering.
+        </p>
         <div style={styles.grid}>
-          <div style={styles.card}>⚡ Complete installaties</div>
-          <div style={styles.card}>🏠 Nieuwbouw & renovatie</div>
-          <div style={styles.card}>🏢 Utiliteit & zakelijke projecten</div>
-          <div style={styles.card}>🔌 Groepenkasten & krachtstroom</div>
-          <div style={styles.card}>💡 Verlichting & lichtplannen</div>
-          <div style={styles.card}>🚗 Laadpalen</div>
+          <div style={styles.card}>⚡ Complete installaties<br />Van A tot Z voor woningen en bedrijfspanden</div>
+          <div style={styles.card}>🏠 Nieuwbouw & renovatie<br />Volledige elektra bij verbouwingen en nieuwbouw</div>
+          <div style={styles.card}>🏢 Utiliteit & zakelijke projecten<br />Kantoren, winkels en bedrijfspanden</div>
+          <div style={styles.card}>🔌 Groepenkasten & krachtstroom<br />Uitbreiden, vervangen en aansluiten</div>
+          <div style={styles.card}>💡 Verlichting & lichtplannen<br />Binnen, buiten en LED-oplossingen</div>
+          <div style={styles.card}>🚗 Laadpalen<br />Installatie voor thuis en zakelijk gebruik</div>
         </div>
       </section>
 
       <section style={styles.sectionDark}>
+        <h2>Waarom kiezen voor ons?</h2>
+        <div style={styles.grid}>
+          <div style={styles.card}>✅ Ervaren specialist</div>
+          <div style={styles.card}>✅ NEN 1010 & 3140</div>
+          <div style={styles.card}>✅ Grote projecten mogelijk</div>
+          <div style={styles.card}>✅ Transparante prijzen</div>
+        </div>
+      </section>
+
+      <section style={styles.sectionDark}>
+        <h2>Certificeringen</h2>
+        <div style={styles.certBox}>
+          <p>Wij werken volgens de normen van <b>NEN 1010</b> en <b>NEN 3140</b>.</p>
+          <p>Dit staat garant voor veilige, betrouwbare en professionele elektrische installaties.</p>
+        </div>
+      </section>
+
+      <section style={styles.sectionSEO}>
+        <h2>Elektricien in Apeldoorn nodig?</h2>
+        <p>
+          Spoed of planning nodig? Wij helpen direct bij storingen,
+          groepenkasten en elektra problemen in Apeldoorn en omgeving.
+        </p>
+        <div style={{ margin: "20px 0" }}>
+          <a href={`https://wa.me/${whatsappNumber}`} style={styles.heroBtn}>
+            💬 Direct contact
+          </a>
+        </div>
+      </section>
+
+      <section style={styles.section}>
         <h2>Offerte aanvragen</h2>
         <form onSubmit={sendEmail} style={styles.form}>
           <input name="naam" placeholder="Naam" onChange={handleChange} style={styles.input} required />
@@ -147,25 +178,31 @@ const styles = {
   },
   hero: {
     textAlign: "center",
-    padding: "110px 20px",
-    backgroundSize: "cover",
+    padding: "90px 20px",
+    backgroundImage:
+      "linear-gradient(rgba(15,27,51,0.88), rgba(29,78,216,0.88)), url('/logo-khaleki.jpg.jpeg')",
+    backgroundSize: "contain",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
-    minHeight: "520px",
+    minHeight: "420px",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
   },
   trustSection: {
     padding: "80px 30px",
-    background: "#0f1b33",
+    backgroundImage:
+      "linear-gradient(rgba(11,18,32,0.78), rgba(15,27,51,0.88)), url('https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=1600&auto=format&fit=crop')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
   },
   trustOverlay: {
     maxWidth: "1100px",
     margin: "0 auto",
   },
-  title: { fontSize: 42, fontWeight: "bold" },
-  subtitle: { opacity: 0.9, fontSize: 18 },
+  title: { fontSize: 40 },
+  subtitle: { opacity: 0.85 },
   heroBtn: {
     background: "#1d4ed8",
     padding: "12px 20px",
@@ -175,11 +212,17 @@ const styles = {
     display: "inline-block",
     marginTop: 15,
   },
-  section: { padding: 50 },
+  section: { padding: 50, background: "#0b1220" },
   sectionDark: { padding: 50, background: "#0f1b33" },
+  sectionSEO: {
+    padding: 50,
+    background: "#111c33",
+    borderTop: "2px solid #1d4ed8",
+    borderBottom: "2px solid #1d4ed8",
+  },
   grid: {
     display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+    gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
     gap: 15,
     marginTop: 20,
   },
@@ -187,6 +230,13 @@ const styles = {
     background: "#111c33",
     padding: 20,
     borderRadius: 12,
+  },
+  certBox: {
+    background: "#13264a",
+    padding: 20,
+    borderRadius: 12,
+    border: "1px solid #1d4ed8",
+    marginTop: 20,
   },
   form: {
     display: "flex",
