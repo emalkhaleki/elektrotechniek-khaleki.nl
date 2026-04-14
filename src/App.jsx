@@ -61,7 +61,25 @@ export default function App() {
           🔥 Direct hulp nodig
         </a>
       </section>
+<section style={styles.trustSection}>
+  <div style={styles.trustOverlay}>
+    <h2 style={{ fontSize: 32, marginBottom: 20 }}>
+      Professionele elektrotechnische installaties voor woning en utiliteit
+    </h2>
+    <p style={{ maxWidth: 700, lineHeight: 1.7, opacity: 0.95 }}>
+      Specialist in groepenkasten, complete installaties, renovatie,
+      nieuwbouw en zakelijke projecten. Veilig uitgevoerd volgens
+      NEN 1010 en NEN 3140.
+    </p>
 
+    <div style={styles.grid}>
+      <div style={styles.card}>✅ 24/7 spoedservice</div>
+      <div style={styles.card}>✅ Zakelijke & particuliere projecten</div>
+      <div style={styles.card}>✅ Gecertificeerd vakwerk</div>
+      <div style={styles.card}>✅ Snelle offerte</div>
+    </div>
+  </div>
+</section>
       <section style={styles.section}>
         <h2>Onze diensten</h2>
         <p style={{ opacity: 0.85, marginTop: 10 }}>
@@ -168,7 +186,25 @@ const styles = {
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-  },
+  },<section style={styles.trustSection}>
+  <div style={styles.trustOverlay}>
+    <h2 style={{ fontSize: 32, marginBottom: 20 }}>
+      Professionele elektrotechnische installaties voor woning en utiliteit
+    </h2>
+    <p style={{ maxWidth: 700, lineHeight: 1.7, opacity: 0.95 }}>
+      Specialist in groepenkasten, complete installaties, renovatie,
+      nieuwbouw en zakelijke projecten. Veilig uitgevoerd volgens
+      NEN 1010 en NEN 3140.
+    </p>
+
+    <div style={styles.grid}>
+      <div style={styles.card}>✅ 24/7 spoedservice</div>
+      <div style={styles.card}>✅ Zakelijke & particuliere projecten</div>
+      <div style={styles.card}>✅ Gecertificeerd vakwerk</div>
+      <div style={styles.card}>✅ Snelle offerte</div>
+    </div>
+  </div>
+</sectio
   title: { fontSize: 40 },
   subtitle: { opacity: 0.85 },
   heroBtn: {
