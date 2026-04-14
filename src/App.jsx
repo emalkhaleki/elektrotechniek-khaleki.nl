@@ -127,6 +127,40 @@ export default function App() {
     </div>
   );
 }
+// Voeg deze nieuwe sectie toe ONDER de hero section en BOVEN 'Onze diensten'
+<section style={styles.trustSection}>
+  <div style={styles.trustOverlay}>
+    <h2 style={{ fontSize: 32, marginBottom: 20 }}>
+      Professionele elektrotechnische installaties voor woning en utiliteit
+    </h2>
+    <p style={{ maxWidth: 700, lineHeight: 1.7, opacity: 0.95 }}>
+      Specialist in groepenkasten, complete installaties, renovatie,
+      nieuwbouw en zakelijke projecten. Veilig uitgevoerd volgens
+      NEN 1010 en NEN 3140.
+    </p>
+
+    <div style={styles.grid}>
+      <div style={styles.card}>✅ 24/7 spoedservice</div>
+      <div style={styles.card}>✅ Zakelijke & particuliere projecten</div>
+      <div style={styles.card}>✅ Gecertificeerd vakwerk</div>
+      <div style={styles.card}>✅ Snelle offerte</div>
+    </div>
+  </div>
+</section>
+
+// Voeg deze style toe in const styles
+trustSection: {
+  padding: "80px 30px",
+  backgroundImage:
+    "linear-gradient(rgba(11,18,32,0.78), rgba(15,27,51,0.88)), url('https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=1600&auto=format&fit=crop')",
+  backgroundSize: "cover",
+  backgroundPosition: "center",
+  backgroundRepeat: "no-repeat",
+},
+trustOverlay: {
+  maxWidth: "1100px",
+  margin: "0 auto",
+}
 
 const styles = {
   page: {
