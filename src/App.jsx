@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+
 export default function App() {
   const [form, setForm] = useState({
     naam: "",
@@ -61,25 +62,26 @@ export default function App() {
           🔥 Direct hulp nodig
         </a>
       </section>
-<section style={styles.trustSection}>
-  <div style={styles.trustOverlay}>
-    <h2 style={{ fontSize: 32, marginBottom: 20 }}>
-      Professionele elektrotechnische installaties voor woning en utiliteit
-    </h2>
-    <p style={{ maxWidth: 700, lineHeight: 1.7, opacity: 0.95 }}>
-      Specialist in groepenkasten, complete installaties, renovatie,
-      nieuwbouw en zakelijke projecten. Veilig uitgevoerd volgens
-      NEN 1010 en NEN 3140.
-    </p>
 
-    <div style={styles.grid}>
-      <div style={styles.card}>✅ 24/7 spoedservice</div>
-      <div style={styles.card}>✅ Zakelijke & particuliere projecten</div>
-      <div style={styles.card}>✅ Gecertificeerd vakwerk</div>
-      <div style={styles.card}>✅ Snelle offerte</div>
-    </div>
-  </div>
-</section>
+      <section style={styles.trustSection}>
+        <div style={styles.trustOverlay}>
+          <h2 style={{ fontSize: 32, marginBottom: 20 }}>
+            Professionele elektrotechnische installaties voor woning en utiliteit
+          </h2>
+          <p style={{ maxWidth: 700, lineHeight: 1.7, opacity: 0.95 }}>
+            Specialist in groepenkasten, complete installaties, renovatie,
+            nieuwbouw en zakelijke projecten. Veilig uitgevoerd volgens
+            NEN 1010 en NEN 3140.
+          </p>
+          <div style={styles.grid}>
+            <div style={styles.card}>✅ 24/7 spoedservice</div>
+            <div style={styles.card}>✅ Zakelijke & particuliere projecten</div>
+            <div style={styles.card}>✅ Gecertificeerd vakwerk</div>
+            <div style={styles.card}>✅ Snelle offerte</div>
+          </div>
+        </div>
+      </section>
+
       <section style={styles.section}>
         <h2>Onze diensten</h2>
         <p style={{ opacity: 0.85, marginTop: 10 }}>
@@ -97,18 +99,20 @@ export default function App() {
       </section>
 
       <section style={styles.sectionDark}>
+        <h2>Waarom kiezen voor ons?</h2>
+        <div style={styles.grid}>
+          <div style={styles.card}>✅ Ervaren specialist</div>
+          <div style={styles.card}>✅ NEN 1010 & 3140</div>
+          <div style={styles.card}>✅ Grote projecten mogelijk</div>
+          <div style={styles.card}>✅ Transparante prijzen</div>
+        </div>
+      </section>
+
+      <section style={styles.sectionDark}>
         <h2>Certificeringen</h2>
         <div style={styles.certBox}>
           <p>Wij werken volgens de normen van <b>NEN 1010</b> en <b>NEN 3140</b>.</p>
           <p>Dit staat garant voor veilige, betrouwbare en professionele elektrische installaties.</p>
-        </div>
-      </section>
-
-      <section style={styles.section}>
-        <h2>Woning & Utiliteit</h2>
-        <div style={styles.grid}>
-          <div style={styles.card}>🏠 Woningbouw<br />Particuliere installaties en renovaties</div>
-          <div style={styles.card}>🏢 Utiliteit<br />Bedrijven, winkels en zakelijke projecten</div>
         </div>
       </section>
 
@@ -180,31 +184,23 @@ const styles = {
     backgroundSize: "contain",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
-    position: "relative",
-    overflow: "hidden",
     minHeight: "420px",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-  },<section style={styles.trustSection}>
-  <div style={styles.trustOverlay}>
-    <h2 style={{ fontSize: 32, marginBottom: 20 }}>
-      Professionele elektrotechnische installaties voor woning en utiliteit
-    </h2>
-    <p style={{ maxWidth: 700, lineHeight: 1.7, opacity: 0.95 }}>
-      Specialist in groepenkasten, complete installaties, renovatie,
-      nieuwbouw en zakelijke projecten. Veilig uitgevoerd volgens
-      NEN 1010 en NEN 3140.
-    </p>
-
-    <div style={styles.grid}>
-      <div style={styles.card}>✅ 24/7 spoedservice</div>
-      <div style={styles.card}>✅ Zakelijke & particuliere projecten</div>
-      <div style={styles.card}>✅ Gecertificeerd vakwerk</div>
-      <div style={styles.card}>✅ Snelle offerte</div>
-    </div>
-  </div>
-</sectio
+  },
+  trustSection: {
+    padding: "80px 30px",
+    backgroundImage:
+      "linear-gradient(rgba(11,18,32,0.78), rgba(15,27,51,0.88)), url('https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=1600&auto=format&fit=crop')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+  },
+  trustOverlay: {
+    maxWidth: "1100px",
+    margin: "0 auto",
+  },
   title: { fontSize: 40 },
   subtitle: { opacity: 0.85 },
   heroBtn: {
@@ -274,17 +270,5 @@ const styles = {
     fontWeight: "bold",
     zIndex: 9999,
     textDecoration: "none",
-  },trustSection: {
-  padding: "80px 30px",
-  backgroundImage:
-    "linear-gradient(rgba(11,18,32,0.78), rgba(15,27,51,0.88)), url('https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=1600&auto=format&fit=crop')",
-  backgroundSize: "cover",
-  backgroundPosition: "center",
-  backgroundRepeat: "no-repeat",
-},
-trustOverlay: {
-  maxWidth: "1100px",
-  margin: "0 auto",
-}
-
+  },
 };
