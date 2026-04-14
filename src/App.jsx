@@ -238,5 +238,17 @@ const styles = {
     fontWeight: "bold",
     zIndex: 9999,
     textDecoration: "none",
-  },
+  },trustSection: {
+  padding: "80px 30px",
+  backgroundImage:
+    "linear-gradient(rgba(11,18,32,0.78), rgba(15,27,51,0.88)), url('https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=1600&auto=format&fit=crop')",
+  backgroundSize: "cover",
+  backgroundPosition: "center",
+  backgroundRepeat: "no-repeat",
+},
+trustOverlay: {
+  maxWidth: "1100px",
+  margin: "0 auto",
+}
+
 };
