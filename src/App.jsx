@@ -134,7 +134,7 @@ const styles = {
   },
   hero: {
     minHeight: "560px",
-    backgroundImage: "linear-gradient(rgba(15,23,42,0.55), rgba(15,23,42,0.55)), url('/mnt/data/WhatsApp Image 2026-04-10 at 18.55.56 (3).jpeg')",
+    backgroundImage: "linear-gradient(rgba(15,23,42,0.55), rgba(15,23,42,0.55)), url('https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=1800&auto=format&fit=crop')",
     backgroundSize: "cover",
     backgroundPosition: "center",
     display: "flex",
