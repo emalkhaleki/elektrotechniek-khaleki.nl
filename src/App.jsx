@@ -39,7 +39,7 @@ export default function App() {
 
       <section style={styles.hero}>
         <div style={styles.heroOverlay}>
-          <p style={styles.kicker}>Professioneel installatiebedrijf</p>
+          <p style={styles.kicker}>Elektrotechnisch installatiebedrijf</p>
           <h1 style={styles.title}>Sterke elektrotechnische oplossingen voor woning en utiliteit</h1>
           <p style={styles.subtitle}>
             Specialist in groepenkasten, storingen, renovatie, nieuwbouw en zakelijke projecten in Apeldoorn en omgeving.
