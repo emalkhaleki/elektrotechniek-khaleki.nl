@@ -134,7 +134,7 @@ const styles = {
   },
   hero: {
     minHeight: "560px",
-    backgroundImage: "linear-gradient(rgba(15,23,42,0.55), rgba(15,23,42,0.55)), url('https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=1800&auto=format&fit=crop')",
+    backgroundImage: "linear-gradient(rgba(15,23,42,0.55), rgba(15,23,42,0.55)), url('https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=1800&auto=format&fit=crop')",
     backgroundSize: "cover",
     backgroundPosition: "center",
     display: "flex",
