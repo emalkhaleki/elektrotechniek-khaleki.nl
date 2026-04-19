@@ -133,6 +133,8 @@ const styles = {
     textDecoration: "none",
   },
   hero: {
+    <p>✔ Binnen 24 uur reactie</p>
+<p>✔ Spoedservice mogelijk</p>
     minHeight: "560px",
     backgroundImage: "linear-gradient(rgba(15,23,42,0.55), rgba(15,23,42,0.55)), url('https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=1800&auto=format&fit=crop')",
     backgroundSize: "cover",
