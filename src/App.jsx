@@ -43,10 +43,10 @@ export default function App() {
 
       <section style={styles.hero}>
         <div style={styles.heroOverlay}>
-          <p style={styles.kicker}>Elektricien in Apeldoorn</p>
+          <p style={styles.kicker}>Elektricien in Apeldoorn en omgeving </p>
           <h1 style={styles.title}>Elektricien voor groepenkasten en installaties</h1>
           <p style={styles.subtitle}>
-            Specialist in groepenkasten, storingen, renovatie en nieuwbouw.
+            Specialist in elektrotechnische installaties woning en utiliteit renovatie en nieuwbouw.
           </p>
 
           <div style={styles.urgency}>
