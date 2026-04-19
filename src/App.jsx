@@ -164,7 +164,7 @@ const styles = {
     minHeight: "560px",
    backgroundImage: `
   linear-gradient(rgba(15,23,42,0.85), rgba(15,23,42,0.85)),
-  url('/logo.png')
+  url('/url('https://upload.wikimedia.org/wikipedia/commons/3/3f/Logo_Test.png')')
 `,
 backgroundSize: "600px",
 backgroundRepeat: "no-repeat",
