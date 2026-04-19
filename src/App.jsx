@@ -10,20 +10,23 @@ export default function App() {
   const whatsappNumber = "31644878482";
 
   useEffect(() => {
-    document.title = "Elektrotechniek Khaleki | Professionele installaties in Apeldoorn";
+    document.title = "Elektricien Apeldoorn | Elektrotechniek Khaleki";
+
+    // SEO meta description
+    const meta = document.createElement("meta");
+    meta.name = "description";
+    meta.content = "Elektricien in Apeldoorn voor groepenkasten, storingen en installaties. Snelle service en gecertificeerd vakwerk.";
+    document.head.appendChild(meta);
   }, []);
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const sendEmail = (e) => {
+  const sendWhatsApp = (e) => {
     e.preventDefault();
-    window.location.href =
-      `mailto:emalkhaleki@hotmail.com?subject=Offerte aanvraag van ${form.naam}&body=` +
-      `Naam: ${form.naam}%0D%0A` +
-      `Telefoon: ${form.telefoon}%0D%0A` +
-      `Bericht: ${form.bericht}`;
+    const message = `Hallo, ik wil een offerte aanvragen.%0A%0ANaam: ${form.naam}%0ATelefoon: ${form.telefoon}%0ABericht: ${form.bericht}`;
+    window.open(`https://wa.me/${whatsappNumber}?text=${message}`, "_blank");
   };
 
   return (
@@ -33,19 +36,26 @@ export default function App() {
         <nav style={styles.nav}>
           <a href="#diensten" style={styles.navLink}>Diensten</a>
           <a href="#contact" style={styles.navLink}>Contact</a>
-          <a href={`https://wa.me/${whatsappNumber}`} style={styles.ctaBtn}>WhatsApp</a>
+          <a href="tel:0644878482" style={styles.navLink}>0644878482</a>
+          <a href={`https://wa.me/${whatsappNumber}?text=Hallo,%20ik%20wil%20een%20offerte%20aanvragen`} style={styles.ctaBtn}>WhatsApp</a>
         </nav>
       </header>
 
       <section style={styles.hero}>
         <div style={styles.heroOverlay}>
-          <p style={styles.kicker}>Professioneel installatiebedrijf</p>
-          <h1 style={styles.title}>Sterke elektrotechnische oplossingen voor woning en utiliteit</h1>
+          <p style={styles.kicker}>Elektricien in Apeldoorn</p>
+          <h1 style={styles.title}>Elektricien voor groepenkasten en installaties</h1>
           <p style={styles.subtitle}>
-            Specialist in groepenkasten, storingen, renovatie, nieuwbouw en zakelijke projecten in Apeldoorn en omgeving.
+            Specialist in groepenkasten, storingen, renovatie en nieuwbouw.
           </p>
+
+          <div style={styles.urgency}>
+            ✔ Binnen 24 uur reactie<br />
+            ✔ Spoedservice mogelijk
+          </div>
+
           <div style={styles.heroActions}>
-            <a href={`https://wa.me/${whatsappNumber}`} style={styles.primaryBtn}>Offerte aanvragen</a>
+            <a href={`https://wa.me/${whatsappNumber}?text=Hallo,%20ik%20wil%20een%20offerte%20aanvragen`} style={styles.primaryBtn}>Offerte aanvragen</a>
             <a href="tel:0644878482" style={styles.secondaryBtn}>Bel direct</a>
           </div>
         </div>
@@ -73,19 +83,28 @@ export default function App() {
       <section style={styles.sectionAlt}>
         <h2 style={styles.heading}>Waarom kiezen voor ons</h2>
         <p style={styles.textBlock}>
-          Wij leveren betrouwbare en veilige installaties voor zowel woningen als zakelijke projecten. Onze werkwijze is strak, professioneel en volledig volgens de geldende normen.
+          Wij leveren betrouwbare en veilige installaties volgens de hoogste normen.
         </p>
+      </section>
+
+      <section style={styles.section}>
+        <h2 style={styles.heading}>Ervaringen van klanten</h2>
+        <p>⭐⭐⭐⭐⭐ "Snelle service en netjes gewerkt"</p>
+        <p>⭐⭐⭐⭐⭐ "Professioneel en betrouwbaar"</p>
       </section>
 
       <section id="contact" style={styles.section}>
         <h2 style={styles.heading}>Vraag direct een offerte aan</h2>
-        <form onSubmit={sendEmail} style={styles.form}>
+        <form onSubmit={sendWhatsApp} style={styles.form}>
           <input name="naam" placeholder="Naam" onChange={handleChange} style={styles.input} required />
           <input name="telefoon" placeholder="Telefoonnummer" onChange={handleChange} style={styles.input} required />
           <textarea name="bericht" placeholder="Beschrijf uw project" onChange={handleChange} style={styles.textarea} required />
-          <button style={styles.submitBtn}>Verstuur aanvraag</button>
+          <button style={styles.submitBtn}>Verstuur via WhatsApp</button>
         </form>
       </section>
+
+      {/* Floating WhatsApp knop */}
+      <a href={`https://wa.me/${whatsappNumber}`} style={styles.floatingBtn}>💬</a>
 
       <footer style={styles.footer}>
         © 2026 Elektrotechniek Khaleki | Apeldoorn
@@ -163,6 +182,10 @@ const styles = {
     maxWidth: 700,
     lineHeight: 1.6,
   },
+  urgency: {
+    marginTop: 20,
+    fontWeight: "bold",
+  },
   heroActions: {
     display: "flex",
     gap: 15,
@@ -184,7 +207,7 @@ const styles = {
   },
   statsBar: {
     display: "grid",
-    gridTemplateColumns: "repeat(4, 1fr)",
+    gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))",
     gap: 20,
     padding: "24px 40px",
     background: "#0f172a",
@@ -247,6 +270,17 @@ const styles = {
     border: "none",
     padding: 14,
     borderRadius: 8,
+  },
+  floatingBtn: {
+    position: "fixed",
+    bottom: 20,
+    right: 20,
+    background: "#25D366",
+    color: "white",
+    padding: 16,
+    borderRadius: "50%",
+    textDecoration: "none",
+    fontSize: 20,
   },
   footer: {
     background: "#0f172a",
