@@ -163,8 +163,10 @@ const styles = {
   hero: {
     minHeight: "560px",
    backgroundImage: backgroundImage: `
+  backgroundImage: `
   linear-gradient(rgba(15,23,42,0.75), rgba(15,23,42,0.85)),
-  url(${logo})
+  url('/logo.png')
+`,
 `,`
 
 `,
