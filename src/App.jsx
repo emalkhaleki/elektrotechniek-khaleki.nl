@@ -83,7 +83,7 @@ export default function App() {
       <section style={styles.sectionAlt}>
         <h2 style={styles.heading}>Waarom kiezen voor ons</h2>
         <p style={styles.textBlock}>
-          Wij leveren betrouwbare en veilige installaties volgens de hoogste normen.
+          Wij leveren betrouwbare en veilige installaties volgens de normen Nen1010 en Nen3140.
         </p>
       </section>
 
