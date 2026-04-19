@@ -46,7 +46,7 @@ export default function App() {
           <p style={styles.kicker}>Elektricien in Apeldoorn</p>
           <h1 style={styles.title}>Elektricien voor groepenkasten en installaties</h1>
           <p style={styles.subtitle}>
-            Specialist in groepenkasten, storingen, renovatie en nieuwbouw.
+            Specialist in elektrotechnische installaties woning en utiliteit renovatie en nieuwbouw.
           </p>
 
           <div style={styles.urgency}>
