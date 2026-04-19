@@ -159,12 +159,13 @@ const styles = {
     padding: "10px 18px",
     borderRadius: 8,
     textDecoration: "none",
-  },
+  },backgroundImage: `
+  linear-gradient(rgba(15,23,42,0.75), rgba(15,23,42,0.85)),
+  url('/logo.png')
+`,
   hero: {
     minHeight: "560px",
-   backgroundImage: `
-  linear-gradient(rgba(15,23,42,0.85), rgba(15,23,42,0.85)),
-  url('/logo.png')
+  
 `,
 backgroundSize: "600px",
 backgroundRepeat: "no-repeat",
