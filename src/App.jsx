@@ -162,11 +162,13 @@ const styles = {
   },
   hero: {
     minHeight: "560px",
-    backgroundImage: "linear-gradient(rgba(15,23,42,0.55), rgba(15,23,42,0.55)), url('https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=1800&auto=format&fit=crop')",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    display: "flex",
-    alignItems: "center",
+ backgroundImage: `
+  linear-gradient(rgba(15,23,42,0.85), rgba(15,23,42,0.85)),
+  url('/logo khaleki elektrotechiek.png')
+`,
+backgroundSize: "600px",
+backgroundRepeat: "no-repeat",
+backgroundPosition: "center",
   },
   heroOverlay: {
     maxWidth: "1200px",
