@@ -43,10 +43,10 @@ export default function App() {
 
       <section style={styles.hero}>
         <div style={styles.heroOverlay}>
-          <p style={styles.kicker}>Elektricien in Apeldoorn en omgeving </p>
+          <p style={styles.kicker}>Elektricien in Apeldoorn</p>
           <h1 style={styles.title}>Elektricien voor groepenkasten en installaties</h1>
-          <p style={styles.subtitle
-            Specialist in elektrotechnische installaties woning en utiliteit renovatie en nieuwbouw.
+          <p style={styles.subtitle}>
+            Specialist in groepenkasten, storingen, renovatie en nieuwbouw.
           </p>
 
           <div style={styles.urgency}>
@@ -83,7 +83,7 @@ export default function App() {
       <section style={styles.sectionAlt}>
         <h2 style={styles.heading}>Waarom kiezen voor ons</h2>
         <p style={styles.textBlock}>
-          Wij leveren betrouwbare en veilige installaties volgens de normen NEN 1010 en NEN 3140.
+          Wij leveren betrouwbare en veilige installaties volgens de hoogste normen.
         </p>
       </section>
 
