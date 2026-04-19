@@ -162,7 +162,7 @@ const styles = {
   },
   hero: {
     minHeight: "560px",
-    backgroundImage: "linear-gradient(rgba(15,23,42,0.55), rgba(15,23,42,0.55)), url('/logo khaleki elektrotechniek.png')",
+    backgroundImage: "linear-gradient(rgba(15,23,42,0.55), rgba(15,23,42,0.55)), url('/logo khaleki elektrotechniek.png')
     backgroundSize: "cover",
     backgroundPosition: "center",
     display: "flex",
