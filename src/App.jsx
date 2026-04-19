@@ -88,9 +88,18 @@ export default function App() {
       </section>
 
       <section style={styles.section}>
-        <h2 style={styles.heading}>Ervaringen van klanten</h2>
-        <p>⭐⭐⭐⭐⭐ "Snelle service en netjes gewerkt"</p>
-        <p>⭐⭐⭐⭐⭐ "Professioneel en betrouwbaar"</p>
+        <h2 style={styles.heading}>Google reviews</h2>
+        <div style={styles.reviewBox}>
+          <p>Bekijk onze echte klantbeoordelingen op Google:</p>
+          <a
+            href="https://www.google.com/search?q=Elektrotechniek+Khaleki+Apeldoorn"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={styles.reviewBtn}
+          >
+            Bekijk Google reviews
+          </a>
+        </div>
       </section>
 
       <section id="contact" style={styles.section}>
@@ -281,6 +290,22 @@ const styles = {
     borderRadius: "50%",
     textDecoration: "none",
     fontSize: 20,
+  },
+  reviewBox: {
+    padding: 30,
+    border: "1px solid #e2e8f0",
+    borderRadius: 12,
+    background: "#f8fafc",
+    maxWidth: 600,
+  },
+  reviewBtn: {
+    display: "inline-block",
+    marginTop: 15,
+    background: "#1d4ed8",
+    color: "white",
+    padding: "12px 18px",
+    borderRadius: 8,
+    textDecoration: "none",
   },
   footer: {
     background: "#0f172a",
