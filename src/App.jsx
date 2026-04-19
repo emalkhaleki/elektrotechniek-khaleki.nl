@@ -10,17 +10,20 @@ export default function App() {
   const whatsappNumber = "31644878482";
 
   useEffect(() => {
-    document.title = "Elektricien Apeldoorn | Elektrotechniek Khaleki";
+    document.title = "Elektrotechniek Khaleki | Professionele installaties in Apeldoorn";
   }, []);
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const sendWhatsApp = (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
-    const message = `Hallo, ik wil een offerte aanvragen.%0A%0ANaam: ${form.naam}%0ATelefoon: ${form.telefoon}%0ABericht: ${form.bericht}`;
-    window.open(`https://wa.me/${whatsappNumber}?text=${message}`, "_blank");
+    window.location.href =
+      `mailto:emalkhaleki@hotmail.com?subject=Offerte aanvraag van ${form.naam}&body=` +
+      `Naam: ${form.naam}%0D%0A` +
+      `Telefoon: ${form.telefoon}%0D%0A` +
+      `Bericht: ${form.bericht}`;
   };
 
   return (
@@ -30,33 +33,26 @@ export default function App() {
         <nav style={styles.nav}>
           <a href="#diensten" style={styles.navLink}>Diensten</a>
           <a href="#contact" style={styles.navLink}>Contact</a>
-          <a href="tel:0644878482" style={styles.phone}>0644878482</a>
-          <a href={`https://wa.me/${whatsappNumber}?text=Hallo,%20ik%20wil%20een%20offerte%20aanvragen`} style={styles.ctaBtn}>WhatsApp</a>
+          <a href={`https://wa.me/${whatsappNumber}`} style={styles.ctaBtn}>WhatsApp</a>
         </nav>
       </header>
 
       <section style={styles.hero}>
         <div style={styles.heroOverlay}>
-          <p style={styles.kicker}>Elektricien in Apeldoorn</p>
-          <h1 style={styles.title}>Elektricien voor groepenkasten en installaties</h1>
+          <p style={styles.kicker}>Professioneel installatiebedrijf</p>
+          <h1 style={styles.title}>Sterke elektrotechnische oplossingen voor woning en utiliteit</h1>
           <p style={styles.subtitle}>
-            Specialist in storingen, renovatie en nieuwbouw. Snelle service en gecertificeerd vakwerk.
+            Specialist in groepenkasten, storingen, renovatie, nieuwbouw en zakelijke projecten in Apeldoorn en omgeving.
           </p>
-
-          <div style={styles.urgency}>
-            <p>✔ Binnen 24 uur reactie</p>
-            <p>✔ Spoedservice mogelijk</p>
-          </div>
-
           <div style={styles.heroActions}>
-            <a href={`https://wa.me/${whatsappNumber}?text=Hallo,%20ik%20wil%20een%20offerte%20aanvragen`} style={styles.primaryBtn}>Offerte aanvragen</a>
+            <a href={`https://wa.me/${whatsappNumber}`} style={styles.primaryBtn}>Offerte aanvragen</a>
             <a href="tel:0644878482" style={styles.secondaryBtn}>Bel direct</a>
           </div>
         </div>
       </section>
 
       <section style={styles.statsBar}>
-        <div>✔ Gecertificeerd</div>
+        <div>✔ Gecertificeerd vakwerk</div>
         <div>✔ NEN 1010 & 3140</div>
         <div>✔ Zakelijk & particulier</div>
         <div>✔ Snelle service</div>
@@ -65,11 +61,11 @@ export default function App() {
       <section id="diensten" style={styles.section}>
         <h2 style={styles.heading}>Onze diensten</h2>
         <div style={styles.grid}>
-          <div style={styles.card}>⚡ Installaties</div>
-          <div style={styles.card}>🏢 Bedrijfspanden</div>
-          <div style={styles.card}>🏠 Renovatie</div>
+          <div style={styles.card}>⚡ Complete installaties</div>
+          <div style={styles.card}>🏢 Bedrijfspanden & utiliteit</div>
+          <div style={styles.card}>🏠 Nieuwbouw en renovatie</div>
           <div style={styles.card}>🔌 Groepenkasten</div>
-          <div style={styles.card}>💡 Verlichting</div>
+          <div style={styles.card}>💡 Verlichting en LED</div>
           <div style={styles.card}>🚗 Laadpalen</div>
         </div>
       </section>
@@ -77,27 +73,19 @@ export default function App() {
       <section style={styles.sectionAlt}>
         <h2 style={styles.heading}>Waarom kiezen voor ons</h2>
         <p style={styles.textBlock}>
-          Betrouwbare installaties volgens de hoogste normen. Wij werken snel, veilig en professioneel.
+          Wij leveren betrouwbare en veilige installaties voor zowel woningen als zakelijke projecten. Onze werkwijze is strak, professioneel en volledig volgens de geldende normen.
         </p>
-      </section>
-
-      <section style={styles.section}>
-        <h2 style={styles.heading}>Ervaringen van klanten</h2>
-        <p>⭐⭐⭐⭐⭐ "Snelle service en netjes gewerkt"</p>
-        <p>⭐⭐⭐⭐⭐ "Professioneel en duidelijk"</p>
       </section>
 
       <section id="contact" style={styles.section}>
         <h2 style={styles.heading}>Vraag direct een offerte aan</h2>
-        <form onSubmit={sendWhatsApp} style={styles.form}>
+        <form onSubmit={sendEmail} style={styles.form}>
           <input name="naam" placeholder="Naam" onChange={handleChange} style={styles.input} required />
           <input name="telefoon" placeholder="Telefoonnummer" onChange={handleChange} style={styles.input} required />
           <textarea name="bericht" placeholder="Beschrijf uw project" onChange={handleChange} style={styles.textarea} required />
-          <button style={styles.submitBtn}>Verstuur via WhatsApp</button>
+          <button style={styles.submitBtn}>Verstuur aanvraag</button>
         </form>
       </section>
-
-      <a href={`https://wa.me/${whatsappNumber}`} style={styles.floatingBtn}>💬</a>
 
       <footer style={styles.footer}>
         © 2026 Elektrotechniek Khaleki | Apeldoorn
@@ -107,30 +95,163 @@ export default function App() {
 }
 
 const styles = {
-  page: { fontFamily: "Arial", background: "#fff" },
-  header: { display: "flex", justifyContent: "space-between", padding: 20, borderBottom: "1px solid #eee", position: "sticky", top: 0, background: "#fff" },
-  logo: { fontWeight: "bold" },
-  nav: { display: "flex", gap: 15, alignItems: "center" },
-  navLink: { textDecoration: "none" },
-  phone: { color: "#1d4ed8", fontWeight: "bold" },
-  ctaBtn: { background: "#1d4ed8", color: "#fff", padding: 10, borderRadius: 6, textDecoration: "none" },
-  hero: { minHeight: 500, background: "#0f172a", color: "#fff", display: "flex", alignItems: "center" },
-  heroOverlay: { padding: 40 },
-  title: { fontSize: 40 },
-  subtitle: { maxWidth: 600 },
-  urgency: { marginTop: 20 },
-  heroActions: { marginTop: 20, display: "flex", gap: 10 },
-  primaryBtn: { background: "#1d4ed8", color: "#fff", padding: 12, borderRadius: 6 },
-  secondaryBtn: { background: "#fff", color: "#1d4ed8", padding: 12, borderRadius: 6 },
-  statsBar: { display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(150px,1fr))", padding: 20, background: "#0f172a", color: "#fff", textAlign: "center" },
-  section: { padding: 40 },
-  sectionAlt: { padding: 40, background: "#f1f5f9" },
-  grid: { display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px,1fr))", gap: 15 },
-  card: { padding: 20, border: "1px solid #eee", borderRadius: 10 },
-  form: { display: "flex", flexDirection: "column", gap: 10, maxWidth: 400 },
-  input: { padding: 10 },
-  textarea: { padding: 10 },
-  submitBtn: { background: "#1d4ed8", color: "#fff", padding: 12, border: "none" },
-  floatingBtn: { position: "fixed", bottom: 20, right: 20, background: "#25D366", color: "#fff", padding: 15, borderRadius: "50%", textDecoration: "none" },
-  footer: { textAlign: "center", padding: 20, background: "#0f172a", color: "#fff" },
+  page: {
+    fontFamily: "Arial, sans-serif",
+    background: "#ffffff",
+    color: "#1e293b",
+  },
+  header: {
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    padding: "22px 40px",
+    background: "#ffffff",
+    borderBottom: "1px solid #e2e8f0",
+    position: "sticky",
+    top: 0,
+    zIndex: 10,
+  },
+  logo: {
+    fontWeight: "bold",
+    letterSpacing: 1,
+    fontSize: 18,
+  },
+  nav: {
+    display: "flex",
+    gap: 20,
+    alignItems: "center",
+  },
+  navLink: {
+    textDecoration: "none",
+    color: "#334155",
+  },
+  ctaBtn: {
+    background: "#1d4ed8",
+    color: "white",
+    padding: "10px 18px",
+    borderRadius: 8,
+    textDecoration: "none",
+  },
+  hero: {
+    minHeight: "560px",
+    backgroundImage: "linear-gradient(rgba(15,23,42,0.55), rgba(15,23,42,0.55)), url('https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=1800&auto=format&fit=crop')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    display: "flex",
+    alignItems: "center",
+  },
+  heroOverlay: {
+    maxWidth: "1200px",
+    margin: "0 auto",
+    padding: "0 40px",
+    color: "white",
+  },
+  kicker: {
+    textTransform: "uppercase",
+    letterSpacing: 2,
+    fontSize: 14,
+    opacity: 0.9,
+  },
+  title: {
+    fontSize: 52,
+    maxWidth: 800,
+    lineHeight: 1.15,
+    margin: "15px 0",
+  },
+  subtitle: {
+    fontSize: 20,
+    maxWidth: 700,
+    lineHeight: 1.6,
+  },
+  heroActions: {
+    display: "flex",
+    gap: 15,
+    marginTop: 30,
+  },
+  primaryBtn: {
+    background: "#1d4ed8",
+    color: "white",
+    padding: "14px 22px",
+    borderRadius: 8,
+    textDecoration: "none",
+  },
+  secondaryBtn: {
+    background: "white",
+    color: "#1d4ed8",
+    padding: "14px 22px",
+    borderRadius: 8,
+    textDecoration: "none",
+  },
+  statsBar: {
+    display: "grid",
+    gridTemplateColumns: "repeat(4, 1fr)",
+    gap: 20,
+    padding: "24px 40px",
+    background: "#0f172a",
+    color: "white",
+    textAlign: "center",
+    fontWeight: "bold",
+  },
+  section: {
+    padding: "70px 40px",
+    maxWidth: "1200px",
+    margin: "0 auto",
+  },
+  sectionAlt: {
+    padding: "70px 40px",
+    background: "#f8fafc",
+  },
+  heading: {
+    fontSize: 36,
+    marginBottom: 25,
+  },
+  textBlock: {
+    fontSize: 18,
+    lineHeight: 1.8,
+    maxWidth: 850,
+  },
+  grid: {
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+    gap: 20,
+  },
+  card: {
+    padding: 28,
+    border: "1px solid #e2e8f0",
+    borderRadius: 12,
+    boxShadow: "0 6px 18px rgba(0,0,0,0.05)",
+    background: "white",
+    fontSize: 18,
+    fontWeight: 600,
+  },
+  form: {
+    display: "flex",
+    flexDirection: "column",
+    gap: 15,
+    maxWidth: 600,
+  },
+  input: {
+    padding: 14,
+    border: "1px solid #cbd5e1",
+    borderRadius: 8,
+  },
+  textarea: {
+    padding: 14,
+    minHeight: 140,
+    border: "1px solid #cbd5e1",
+    borderRadius: 8,
+  },
+  submitBtn: {
+    background: "#1d4ed8",
+    color: "white",
+    border: "none",
+    padding: 14,
+    borderRadius: 8,
+  },
+  footer: {
+    background: "#0f172a",
+    color: "white",
+    textAlign: "center",
+    padding: 25,
+  },
 };
