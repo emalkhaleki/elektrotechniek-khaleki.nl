@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-
+import React, { useState, useEffect } from 
+import logo from '../logo.png';
 export default function App() {
   const [form, setForm] = useState({
     naam: "",
@@ -162,15 +162,17 @@ const styles = {
   },
   hero: {
     minHeight: "560px",
-   backgroundImage: `
-  linear-gradient(rgba(15,23,42,0.85), rgba(15,23,42,0.85)),
-  url('/url('https://upload.wikimedia.org/wikipedia/commons/3/3f/Logo_Test.png')')
+   backgroundImage: backgroundImage: `
+  linear-gradient(rgba(15,23,42,0.75), rgba(15,23,42,0.85)),
+  url(${logo})
+`,`
+
 `,
-backgroundSize: "600px",
+backgroundSize: backgroundSize: "900px",
 backgroundRepeat: "no-repeat",
 backgroundPosition: "center",
   
-    backgroundSize: "cover",
+    
     backgroundPosition: "center",
     display: "flex",
     alignItems: "center",
