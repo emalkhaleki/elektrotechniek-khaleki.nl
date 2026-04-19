@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 
-import logo from '../logo.png';
+
 export default function App() {
   const [form, setForm] = useState({
     naam: "",
