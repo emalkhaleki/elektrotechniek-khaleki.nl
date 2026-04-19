@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 
+import React, { useState, useEffect } from "react";
 
 export default function App() {
   const [form, setForm] = useState({
@@ -162,19 +162,15 @@ const styles = {
   },
   hero: {
     minHeight: "560px",
-   backgroundImage: backgroundImage: `
-  backgroundImage: `
-  linear-gradient(rgba(15,23,42,0.75), rgba(15,23,42,0.85)),
+   backgroundImage: `
+  linear-gradient(rgba(15,23,42,0.85), rgba(15,23,42,0.85)),
   url('/logo.png')
 `,
-`,`
-
-`,
-backgroundSize: backgroundSize: "900px",
+backgroundSize: "600px",
 backgroundRepeat: "no-repeat",
 backgroundPosition: "center",
   
-    
+    backgroundSize: "cover",
     backgroundPosition: "center",
     display: "flex",
     alignItems: "center",
