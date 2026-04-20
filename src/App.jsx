@@ -160,20 +160,19 @@ const styles = {
     borderRadius: 8,
     textDecoration: "none",
   },
-  hero: {
-    minHeight: "560px",
-   backgroundImage: `
-  linear-gradient(rgba(15,23,42,0.85), rgba(15,23,42,0.85)),
-  url('/logo.png')
-`,
-backgroundSize: "900px",
-backgroundRepeat: "no-repeat",
-backgroundPosition: "center",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    display: "flex",
-    alignItems: "center",
-  },
+hero: {
+  minHeight: "560px",
+  backgroundImage: `
+    linear-gradient(rgba(15,23,42,0.85), rgba(15,23,42,0.9)),
+    url('/logo.png')
+  `,
+  backgroundSize: "1000px",
+  backgroundRepeat: "no-repeat",
+  backgroundPosition: "right center",
+  filter: "brightness(1.1)",
+  display: "flex",
+  alignItems: "center",
+},
   heroOverlay: {
     maxWidth: "1200px",
     margin: "0 auto",
