@@ -159,8 +159,7 @@ const styles = {
     padding: "10px 18px",
     borderRadius: 8,
     textDecoration: "none",
-  },
-hero: {
+ hero: {
   minHeight: "560px",
   backgroundImage: `
     linear-gradient(rgba(15,23,42,0.85), rgba(15,23,42,0.9)),
@@ -173,10 +172,6 @@ hero: {
   display: "flex",
   alignItems: "center",
 },
-},
-},
-`,
-  },
   heroOverlay: {
     maxWidth: "1200px",
     margin: "0 auto",
