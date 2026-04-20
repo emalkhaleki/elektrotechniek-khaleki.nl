@@ -168,7 +168,7 @@ const styles = {
   backgroundSize: "1000px",
   backgroundRepeat: "no-repeat",
   backgroundPosition: "right center",
-  filter: "brightness(1.1)",
+  filter: "brightness(1.8) opacity(0.15)",
   display: "flex",
   alignItems: "center",
 },
