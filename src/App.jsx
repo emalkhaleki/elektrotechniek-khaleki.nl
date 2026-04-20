@@ -169,7 +169,7 @@ const styles = {
 backgroundSize: "900px",
 backgroundRepeat: "no-repeat",
 backgroundPosition: "center",
-  
+    backgroundSize: "cover",
     backgroundPosition: "center",
     display: "flex",
     alignItems: "center",
